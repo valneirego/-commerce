@@ -4,12 +4,17 @@ package com.valneirego.commerce.entities;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 import org.aspectj.weaver.ast.Or;
 
 import java.util.Objects;
 
 @Entity
 @Table(name = "tb_order_item")
+
+@Getter
+@Setter
 
 public class OrderItem {
 
@@ -46,22 +51,6 @@ public class OrderItem {
 
     public void setProduct(Product product){
         id.setProduct(product);
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
     }
 
     @Override

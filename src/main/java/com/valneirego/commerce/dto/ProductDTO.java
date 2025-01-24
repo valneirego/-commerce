@@ -1,7 +1,11 @@
 package com.valneirego.commerce.dto;
 
 import com.valneirego.commerce.entities.Product;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class ProductDTO {
 
     private Long id;
@@ -32,23 +36,4 @@ public class ProductDTO {
     }
 
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
 }
